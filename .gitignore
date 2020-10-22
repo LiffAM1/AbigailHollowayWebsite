@@ -1,0 +1,7 @@
+
+*.config
+*.v2
+*.suo
+
+bin/
+obj/

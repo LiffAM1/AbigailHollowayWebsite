@@ -1,0 +1,69 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AbigailHollowayWebsite.Models.ContactFormModel
+
+<div class="container small-container">
+    <div class="container has-text-centered">
+        <h1 class="title is-3">Contact</h1>
+        <form asp-action="SubmitContactForm" asp-controller="Home" method="post">
+            @Html.AntiForgeryToken()
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Name" asp-for="Name">
+                    <span asp-validation-for="Name"></span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Email" asp-for="Email">
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <textarea class="textarea" placeholder="Email message" asp-for="Message"></textarea>
+                    <span asp-validation-for="Message"></span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="button is-fullwidth is-primary" type="submit" value="Submit"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br /><br />
+    <div class="container has-text-centered">
+        <p class="title is-3">My Info</p>
+        <p class="title is-4">Email</p><p class="subtitle is-5 is-spaced">abigailliff@gmail.com</p>
+        <p class="title is-4">Phone</p><p class="subtitle is-5 is-spaced">330-357-6224</p>
+        <p class="title is-4">Facebook Messenger</p>
+        <p class="subtitle is-5 is-spaced">
+            <a href="https://www.messenger.com/t/abbi.liff">
+                <span class="icon is-medium is-white">
+                    <i class="fab fa-lg fa-facebook-messenger"></i>
+                </span>
+            </a>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(window).on('load',function() {
+        var message = '@TempData["Message"]';
+        if (!isNullOrWhitespace(message))
+            alert(message);
+    });
+
+    function isNullOrWhitespace( input ) {
+
+        if (typeof input === 'undefined' || input == null) return true;
+
+        return input.replace(/\s/g, '').length < 1;
+    }
+
+</script>
+

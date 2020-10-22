@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel='stylesheet' href='../css/site.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight header-image">
+        <!-- START NAV -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="/">
+                                Home 
+                            </a>
+                            <a class="navbar-item" href="/Contact">
+                                Contact
+                            </a>
+                            <a class="navbar-item" href="/Blog">
+                                Blog
+                            </a>
+                            <a class="navbar-item" href="/About">
+                                About
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- END NAV -->
+
+        <!-- START BODY -->
+        <div class="hero-body">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- END BODY -->
+
+        <!-- START FOOT -->
+        <div class="hero-foot">
+            <div class="container">
+                ©2020 Abigail Holloway | <a class="is-white" href="https://pixabay.com/images/id-1989514/">Background Image</a> | <a class="is-white" href="https://bulma.io/">Bulma CSS framework</a>
+            </div>
+        </div>
+        <!-- END FOOT -->
+    </section>
+</body>
+
+</html>
